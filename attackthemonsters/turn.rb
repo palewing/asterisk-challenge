@@ -1,6 +1,4 @@
 class Turn
-  attr_accessor :queue
-
   def initialize(characters)
     @queue = characters
   end

@@ -34,6 +34,6 @@ class MonsterTest < Test::Unit::TestCase
 
     assert_not_nil humanoid.name, 'Monster has preconfigured name'
     assert_not_nil humanoid.weapon, 'Humanoid monster can either use weapon or barehand'
-    assert_equal expected_attribute, humanoid.attribute, 'Type modifies attribute'
+    assert_equal expected_attribute, humanoid.attribute, 'Type & weapon modifies attribute'
   end
 end
