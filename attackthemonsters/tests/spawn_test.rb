@@ -1,6 +1,9 @@
 require "test/unit"
+require_relative '../config'
 require_relative '../player'
 require_relative '../monster'
+require_relative '../weapon_list'
+require_relative '../monster_type_list'
 require_relative '../monster_types/animal_monster'
 require_relative '../monster_types/humanoid_monster'
 require_relative '../weapons/axe'

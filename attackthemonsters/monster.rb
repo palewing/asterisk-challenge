@@ -5,7 +5,7 @@ class Monster
     @type = type
     @name = @type.name
     @weapon = @type.weapon
-    @attribute = { hp: hitpoint, at: attack, df: defence, cc: 0 }
+    @attribute = { hp: hitpoint.to_f, at: attack.to_f, df: defence.to_f, cc: 0.0 }
 
     update_attribute(@type.modifier)
     update_attribute(@weapon.modifier)

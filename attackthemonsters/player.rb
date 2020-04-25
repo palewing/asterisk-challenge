@@ -4,7 +4,7 @@ class Player
   def initialize(name: nil, weapon: nil, hitpoint: 1, attack: 1, defence: 1)
     @name = name
     @weapon = weapon
-    @attribute = { hp: hitpoint, at: attack, df: defence, cc: 0 }
+    @attribute = { hp: hitpoint.to_f, at: attack.to_f, df: defence.to_f, cc: 0.0 }
 
     update_attibute(@weapon.modifier)
   end

@@ -40,26 +40,25 @@ class Battle
   end
 
   def critical?(crit_chance)
-    if crit_chance > rand
-      puts "It's a critical hit!"
-      true
-    end
-    false
+    return false if crit_chance < rand
+
+    puts 'It\'s a critical hit!'
+    true
   end
 
   def decrease_hp(defender, damage)
-    defender.attribute[:hp] -= damage
+    defender.attribute[:hp] = [defender.attribute[:hp] - damage, 0].max
   end
 
   def spawn_player
     name = ['Asterisk', 'Groot', 'Natalia', 'Vikings', 'Spaghetti'].sample
-    weapon = [Axe, Barehand, Knife, Sword].sample
+    weapon = WeaponList.generate.sample
 
     Player.new(name: name, weapon: weapon, hitpoint: rand_attr[:hp], attack: rand_attr[:at], defence: rand_attr[:df])
   end
 
   def spawn_monster
-    type = [AnimalMonster, GolemMonster, HumanoidMonster].sample
+    type = MonsterTypeList.generate.sample
 
     Monster.new(type: type, hitpoint: rand_attr[:hp], attack: rand_attr[:at], defence: rand_attr[:df])
   end
