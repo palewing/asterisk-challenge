@@ -1,12 +1,14 @@
 class Monster
-  attr_accessor :type, :name, :attribute
+  attr_accessor :name, :type, :weapon, :attribute
 
-  def initialize(type, hitpoint, attack, defence)
+  def initialize(type: nil, hitpoint: 1, attack: 1, defence: 1)
     @type = type
     @name = @type.name
+    @weapon = @type.weapon
     @attribute = { hp: hitpoint, at: attack, df: defence, cc: 0 }
 
     update_attribute(@type.modifier)
+    update_attribute(@weapon.modifier)
   end
 
   def update_attribute(modifier)
@@ -16,4 +18,7 @@ class Monster
     @attribute[:cc] += modifier[:cc]
   end
 
+  def alive?
+    @attribute[:hp] > 0
+  end
 end
