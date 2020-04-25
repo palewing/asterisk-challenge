@@ -2,6 +2,7 @@
 Add 1 new weapon
 * How many file changes? 0
 * How many new files? 1 (exclude spec)
+
 Add 1 new monster type
 * How many file changes? 0
 * How many new files? 1 (exclude spec)
