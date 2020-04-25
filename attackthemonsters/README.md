@@ -1,10 +1,18 @@
+## Phase 3 Question
+Add 1 new weapon
+* How many file changes? 0
+* How many new files? 1 (exclude spec)
+Add 1 new monster type
+* How many file changes? 0
+* How many new files? 1 (exclude spec)
 ## Installing
 ```
-git clone https://github.com/palewing/asterisk-challenge.git && cd asterisk-challenge
+git clone https://github.com/palewing/asterisk-challenge.git && cd asterisk-challenge/attackthemonsters
 ```
 ## Running the game
+Inside attackthemonsters directory
 ```
-ruby attackthemonsters/start.rb
+ruby start.rb
 ```
 ## Example Output
 ```
